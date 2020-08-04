@@ -1,1 +1,181 @@
-/* Note there a few "reset" styles given in reset.css. You may opt to remove those if you wish. */
+@import url('https://fonts.googleapis.com/css2?family=Norican&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;700&display=swap');
+
+/* General rules */
+html{
+    font-family: Dosis, "Trebuchet MS", Helvetica, sans-serif;
+    color:rgb(117, 76,36);
+}
+
+.mainContainer{
+    background-color: rgb(255, 255, 231);
+    padding: 0.5em;
+}
+
+/* Top Header */
+
+.topContainer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(117, 76,36);
+    align-items: center;
+    justify-content: flex-start;
+    padding:0.5em;
+}
+
+.logo{
+    flex-shrink: 0;
+    width: 5em;
+    height: 5em;
+}
+
+.logoTitle{
+    flex-grow: 1;
+    margin:5px;
+    font-size: 3.5em;
+    color: rgb(255,247,153);
+    font-family: "Norican";
+}
+
+.searchForm{
+    background-color: rgb(117, 76,36);
+    padding: 0em 1em 1em 1em;
+    display: flex;
+    min-width: 18em;
+    align-self: center;
+}
+
+.searchField{
+    padding: 0.4em;
+    width:100%;
+}
+
+::placeholder{
+    font-family: Dosis, "Trebuchet MS", Helvetica, sans-serif;
+    transform: translate(0, 0.15em);
+}
+
+.searchButton{
+    background-color:rgb(255,247,153);
+    margin-left: 0.2em;
+    width: 2.5em;
+    height: 2.5em;
+    vertical-align: middle;
+}
+
+.material-icons.search {
+    transform: translate(0, 0.12em);
+    font-size: 18px;
+}
+
+.material-icons.shoppingCart{
+    font-size: 3em;
+    margin:5px;
+    color: rgb(255,247,153);
+}
+
+/*Navigation*/
+
+.menu, .submenu {   
+    list-style-type: none;
+}
+
+.menu{
+    margin: 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(140,98,57);
+}
+.choice{
+    color: rgb(255,247,153);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.sub{
+    margin-left: 2em;
+}
+
+.menuItem{
+    padding: 0.2em;
+}
+
+.menuItem:hover{
+    background-color: rgb(166,124,82);
+}
+
+/*Product Results*/
+.resultsTitle{
+    margin-bottom: 0;
+}
+
+.resultsContainer{
+    display: flex;
+    flex-direction: column;
+    color: rgb(255,247,153);
+}
+
+ .result{
+     background-color: rgb(117, 76,36);
+     margin: 1em 0 1em 0;
+     padding: 1em;
+     border-radius: 1em;
+ }
+
+ .product{
+    width:100%;
+    height:100%;
+    border-radius: 1em 1em 0em 0em;
+    padding-bottom: 1em;
+ } 
+
+ .price{
+     font-size:2em;
+ }
+
+.rating{
+   display: flex;
+   align-items: flex-start;
+}
+.resultsButtonsContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+ .resultsButtons {
+    font-family: Dosis, "Trebuchet MS", Helvetica, sans-serif; ;
+    height:2.7em;
+    width: 100%;
+    line-height: 2.7em;
+	font-size: 1.1em;
+	background-color: rgb(255,247,153);
+	color: rgb(117, 76,36);
+	text-align: center;
+	text-decoration: none;
+	border-radius: 0.5em;
+    margin: 0em 0.5em 0.5em 0.5em;
+ }
+
+.resultsButtonIcons{
+    transform: translate(0em, 0.1em);
+}
+
+/*bottom footer*/
+ .bottomContainer{ 
+     display: flex;
+     flex-direction: column;
+     background-color: rgb(117, 76,36);
+     color: rgb(255,247,153);
+     padding: 0 0 0 1em;
+ }
+ .footerOptions{
+     list-style-type: none;
+     color: rgb(255,247,153);
+ }
+
+ .option{
+    color: rgb(255,247,153);
+    text-decoration: none;
+ }

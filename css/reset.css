@@ -7,7 +7,7 @@ html {
 body {
 	margin: 0;
 }
-img {
+.product {
 	max-width: 100%;
 	height: auto;
 	vertical-align: bottom;

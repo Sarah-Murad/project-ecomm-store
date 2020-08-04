@@ -3,58 +3,50 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Document title]</title>
-    <meta name="description" content="[A short description of this site for SEO]">
-    <meta name="author" content="[Your Name]">
+    <title>Interwined</title>
+    <meta name="description" content="An organic, ethical clothing store. We take pride in sourcing our materials from locally maintained farms, right here in Ontario. All are clothes are made from natural fibers that look as high quality as they feel on your skin.">
+    <meta name="author" content="Sarah Murad">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/style.css">
     <!-- Remember to update the values in [square braces] above -->
   </head>
   <body>
-    <header>
-      <!-- Site logo, replace with your own -->
-      <a href="index.html"><img src="img/logo.svg" alt="HTML Logo (replace this!)"></a>
+    
+    <header class= "topContainer">
 
-      <!-- Navigation menu and toggle button (non-functional) -->
+      <!-- Site logo, replace with your own -->
+      <a href="index.html"><img class = "logo" src="img/logo.png" alt="Intertwined Logo"></a>
+      <div class = logoTitle> Intertwined</div>
+
+      <a href="#"><span class="material-icons shoppingCart">shopping_cart</span></a> 
+    </header>
+    
+    <!-- Search for a product (non-functional) -->
+    <form class = "searchForm">
+      <input class = "searchField" placeholder="Search for products..." type="search" name="find" id="find">
+    </label>
+    <button class = "searchButton" type="button">
+      <span class="material-icons search">search</span>
+    </button>
+  </form>
+    
+    <!-- Navigation menu and toggle button (non-functional) -->
       <nav aria-label="Primary">
-        <button type="button">
-          <span class="material-icons">menu</span>
-        </button>
-        <ul>
-          <li><a href="#">Category</a>
-            <ul>
-              <li><a href="#">Subcategory</a></li>
-              <li><a href="#">Subcategory</a></li>
-              <li><a href="#">Subcategory</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Category</a></li>
-          <li><a href="#">Category</a></li>
-          <li><a href="#">Category</a></li>
+        <ul class = "menu">
+          <li class = "menuItem"><a class = "choice" href="#">Home</a></li>
+          <li class = "menuItem"><a class = "choice" href="#">About Us</a></li>
+          <li class = "menuItem"><a class = "choice" href="#">Products</a>
+          <li class = "sub menuItem" ><a class = "choice" href="#">Clothing</a></li>
+          <li class = "sub menuItem"><a class = "choice" href="#">Shoes</a></li>
+          <li class = "sub menuItem"><a class = "choice" href="#">Accessories</a></li>
+          <li class = "menuItem"><a class = "choice" href="#">Support Us</a></li>
         </ul>
       </nav>
 
-      <!-- Search for a product (non-functional) -->
-      <form>
-        <label>Search
-          <input type="search" name="find" id="find">
-        </label>
-        <button type="button"><span class="material-icons">search</span></button>
-      </form>
-
-      <!-- Additional nav links -->
-
-      <ul>
-        <li><a href="#"><span class="material-icons">favorite_border</span></a></li>
-        <li><a href="#"><span class="material-icons">shopping_cart</span></a></li>
-      </ul>
-    </header>
-
-    <main>
+    <main class = "mainContainer">
       <header>
-        <h1>Sale on [Category Name]</h1>
-
+        <h1>Spring Season is Here!</h1>
         <!-- Filtering product form -->
         <form>
           <h2>Filters</h2>
@@ -118,16 +110,16 @@
         </form>
       </header>
 
-      <section>
-        <h2>Results</h2>
-
+      <h2 class = resultsTitle>Results</h2>
+      <section class = "resultsContainer">
         <!-- Product 1 -->
-        <article>
+        <article class = "result">
           <header>
-            <img src="img/product.jpg" alt="Product Image">
+            <img class="product" src="img/white_dress.webp" alt="Product Image">
           </header>
-          <h3>Product Name</h3>
-          <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
+          <data class = "price" value="39">$39.00</data>
+          <h3>Spring White Dress with Blue Flowers</h3>
+          <p>A perfect dress for this spring. Cinched at the waist with a flowy bottom, accented with vibrant blue flowers. Made with 100% locally-sourced cotton.</p>
           <form>
             <fieldset>
               <legend>Colours</legend>
@@ -148,25 +140,27 @@
             </fieldset>
 
             <footer>
-              <dl>
-                <dt>Rating</dt>
+              <dl class = "rating">
+                <dt>Rating:</dt>
                 <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
               </dl>
-              <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
-              <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-              <button type="button"><span class="material-icons">favorite</span></button>
-              <a href="#">see more</a>
+              <div class = "resultsButtonsContainer">
+              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add to Cart</button>
+              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
+              <a class = "resultsButtons" href="#">See More</a>
+            </div>
             </footer>
           </form>
         </article>
 
         <!-- Product 2 -->
-        <article>
+        <article class= "result">
           <header>
-            <img src="img/product.jpg" alt="Product Image">
+            <img class="product" src="img/flowy_loose_dress.jpg" alt="Product Image">
           </header>
-          <h3>Product Name</h3>
-          <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
+          <data class = "price" value="30">$30.00</data>
+          <h3>Baggy Beige Dress with Button Accents</h3>
+          <p>Feeling like you want to be fashionable and comfy? Well nothing is more freeing then this loosefitting beige dress. Held together by this ribbon belt, it shows off your curves while giving you all the breathe. Made with 100% locally sourced cotton</p>
           <form>
             <fieldset>
               <legend>Colours</legend>
@@ -187,25 +181,27 @@
             </fieldset>
 
             <footer>
-              <dl>
-                <dt>Rating</dt>
+              <dl class = "rating">
+                <dt>Rating:</dt>
                 <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
               </dl>
-              <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
-              <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-              <button type="button"><span class="material-icons">favorite</span></button>
-              <a href="#">see more</a>
+              <div class = "resultsButtonsContainer">
+              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add to Cart</button>
+              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
+              <a class = "resultsButtons" href="#">See More</a>
+            </div>
             </footer>
           </form>
         </article>
 
         <!-- Product 3 -->
-        <article>
+        <article class= "result">
           <header>
-            <img src="img/product.jpg" alt="Product Image">
+            <img class="product" src="img/sandals.jpg" alt="Product Image">
           </header>
-          <h3>Product Name</h3>
-          <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
+          <data class = "price" value="39">$39.00</data>
+          <h3>Fabric Open-toed Wedges</h3>
+          <p> Wanting that extra height, but tired of ill-fitting, blister-inducing high heels? Hop on the wedges train! You feel tall and confident, rocking a fabric shoe look with these puppies, and most of all - no pain! Hand-stiched at our warehouse, made with various plant fibers.</p>
           <form>
             <fieldset>
               <legend>Colours</legend>
@@ -226,25 +222,27 @@
             </fieldset>
 
             <footer>
-              <dl>
-                <dt>Rating</dt>
+              <dl class = "rating">
+                <dt>Rating:</dt>
                 <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
               </dl>
-              <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
-              <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-              <button type="button"><span class="material-icons">favorite</span></button>
-              <a href="#">see more</a>
+              <div class = "resultsButtonsContainer">
+              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add to Cart</button>
+              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
+              <a class = "resultsButtons" href="#">See More</a>
+            </div>
             </footer>
           </form>
         </article>
   
         <!-- Product 4 -->
-        <article>
+        <article class= "result">
           <header>
-            <img src="img/product.jpg" alt="Product Image">
+            <img class="product" src="img/leapord_print_dress.jpg" alt="Product Image">
           </header>
-          <h3>Product Name</h3>
-          <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
+          <data class = "price" value="50">$50.00</data>
+          <h3>Leaopard Print Long Sleeve Dress</h3>
+          <p>Channel that fierce energy with this long-sleeved animal print dress! Don't worry, it's still light enough to wear in the spring, and loud enough to turn all those heads with your canine energy. Made with 100% locally-sourced cotton</p>
           <form>
             <fieldset>
               <legend>Colours</legend>
@@ -265,25 +263,27 @@
             </fieldset>
 
             <footer>
-              <dl>
-                <dt>Rating</dt>
+              <dl class = "rating">
+                <dt>Rating:</dt>
                 <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
               </dl>
-              <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
-              <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-              <button type="button"><span class="material-icons">favorite</span></button>
-              <a href="#">see more</a>
+              <div class = "resultsButtonsContainer">
+              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add to Cart</button>
+              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
+              <a class = "resultsButtons" href="#">See More</a>
+            </div>
             </footer>
           </form>
         </article>
 
         <!-- Product 5 -->
-        <article>
+        <article class= "result">
           <header>
-            <img src="img/product.jpg" alt="Product Image">
+            <img class="product" src="img/patterned_blouse.jpg" alt="Product Image">
           </header>
-          <h3>Product Name</h3>
-          <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
+          <data class = "price" value="39">$39.00</data>
+          <h3>Abstract Patterned Blouse</h3>
+          <p> With these soft pinks and turquoise colours, this would make a lovely addition to your spring closet. Made with 100% locally-sourced cotton.</p>
           <form>
             <fieldset>
               <legend>Colours</legend>
@@ -304,14 +304,15 @@
             </fieldset>
 
             <footer>
-              <dl>
-                <dt>Rating</dt>
+              <dl class = "rating">
+                <dt>Rating:</dt>
                 <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
               </dl>
-              <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
-              <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-              <button type="button"><span class="material-icons">favorite</span></button>
-              <a href="#">see more</a>
+              <div class = "resultsButtonsContainer">
+              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add to Cart</button>
+              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
+              <a class = "resultsButtons" href="#">See More</a>
+            </div>
             </footer>
           </form>
         </article>
@@ -328,20 +329,20 @@
         </ol>
       </section>
     </main>
-
-    <footer>
-      <p>&copy; Copyright, 1991.</p>
+</div>
+    <footer class = "bottomContainer">
+      <p>&copy;  Copyright Intertwined , 2020.</p>
       <nav aria-label="Legal">
-        <ul>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Accessibility Policy</a></li>
+        <ul class ="footerOptions">
+          <li><a class = "option" href="#">Terms of Use</a></li>
+          <li><a class = "option" href="#">Privacy Policy</a></li>
+          <li><a class = "option" href="#">Accessibility Policy</a></li>
         </ul>
       </nav>
-      <ul>
-        <li><a href="#"><span class="material-icons">face</span> Facebook</a></li>
-        <li><a href="#"><span class="material-icons">camera_alt</span> Instagram</a></li>
-        <li><a href="#"><span class="material-icons">alternate_email</span> Twitter</a></li>
+      <ul class ="footerOptions">
+        <li><a class = "option" href="#"><span class="material-icons">face</span> Facebook</a></li>
+        <li><a class = "option" href="#"><span class="material-icons">camera_alt</span> Instagram</a></li>
+        <li><a class = "option" href="#"><span class="material-icons">alternate_email</span> Twitter</a></li>
       </ul>
     </footer>
 
