@@ -130,7 +130,7 @@ ol{
 /*Filters*/
 .filterForm{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 
 }
@@ -329,6 +329,10 @@ ol{
  }
 
  @media screen and (min-width: 768px){
+    .filterForm{
+        flex-direction: row;
+    }
+    
     .sub{
         margin: 0;
     }
