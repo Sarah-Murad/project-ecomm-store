@@ -132,11 +132,11 @@ ol{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
+
 }
 
 .filter{
-    margin: 1em 0em;
+    margin: 0.5em 0em;
 }
 
 /*Product Results*/
