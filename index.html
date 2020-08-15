@@ -17,7 +17,7 @@
 
       <!-- Site logo, replace with your own -->
       <a href="index.html"><img class = "logo" src="img/logo.png" alt="Intertwined Logo"></a>
-      <div class = logoTitle> Intertwined</div>
+      <div class = "logoTitle"> Intertwined</div>
 
       <a href="#"><span class="material-icons shoppingCart">shopping_cart</span></a> 
     </header>
@@ -45,287 +45,259 @@
       </nav>
 
     <main class = "mainContainer">
-      <header>
-        <h1>Spring Season is Here!</h1>
-        <!-- Filtering product form -->
-        <form>
+      <h1 class = mainMessage>Spring Season is Here!</h1>
+      <section class = "filterSection">
+        <header>
+          <!-- Filtering product form -->
           <h2>Filters</h2>
-          <fieldset>
-            <label for="sort">Show</label>
-            <select name="sort" id="sort">
-              <option value="price-high">Price, highest to lowest</option>
-              <option value="price-low">Price, lowest to highest</option>
-              <option value="newest">Newest releases</option>
-            </select>
-          </fieldset>
-          <fieldset>
-            <legend>Colour</legend>
-            <ul>
-              <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
-              <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
-              <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
-              <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
-              <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
-            </ul>
-          </fieldset>
-          <fieldset>
-            <legend>Sizes</legend>
-            <ol>
-              <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
-              <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
-              <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
-              <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
-              <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
-            </ol>
-          </fieldset>
-          <fieldset>
-            <legend>Ratings (above)</legend>
-            <ol>
-              <li>
-                <input type="radio" name="rating" value="4" id="aboveFour">
-                <label for="aboveFour">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="rating" value="3" id="aboveThree">
-                <label for="aboveThree">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="rating" value="2" id="aboveTwo">
-                <label for="aboveTwo">
-                  <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-                </label>
-              </li>
-              <li>
-                <input type="radio" name="rating" value="1" id="aboveOne">
-                <label for="aboveOne">
-                  <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
-                </label>
-              </li>
-            </ol>
-          </fieldset>
-        </form>
-      </header>
-
-      <h2 class = resultsTitle>Results</h2>
-      <section class = "resultsContainer">
-        <!-- Product 1 -->
-        <article class = "result">
-          <header>
-            <img class="product" src="img/white_dress.webp" alt="Product Image">
-          </header>
-          <data class = "price" value="39">$39.00</data>
-          <h3>Spring White Dress with Blue Flowers</h3>
-          <p>A perfect dress for this spring. Cinched at the waist with a flowy bottom, accented with vibrant blue flowers. Made with 100% locally-sourced cotton.</p>
-          <form>
-            <fieldset>
-              <legend>Colours</legend>
+          <form class = "filterForm">
+            <div class = "filter">
+              <select name="sort" id="sort">
+                <option value="price-high">Price, highest to lowest</option>
+                <option value="price-low">Price, lowest to highest</option>
+                <option value="newest">Newest releases</option>
+              </select>
+            </div>
+            <div class = "filter">
+              <legend>Colour</legend>
               <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
+                <li><input type="checkbox" name="colour" value="black" id="black"> <label for="black">Black</label></li>
+                <li><input type="checkbox" name="colour" value="white" id="white"> <label for="white">White</label></li>
+                <li><input type="checkbox" name="colour" value="grey" id="grey"> <label for="grey">Grey</label></li>
+                <li><input type="checkbox" name="colour" value="red" id="red"> <label for="red">Red</label></li>
+                <li><input type="checkbox" name="colour" value="blue" id="blue"> <label for="blue">Blue</label></li>
               </ul>
-            </fieldset>
-
-            <fieldset>
+            </div>
+            <div class = "filter">
               <legend>Sizes</legend>
               <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+                <li><input type="checkbox" name="size" value="xs" id="xs"> <label for="xs">XS</label></li>
+                <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
+                <li><input type="checkbox" name="size" value="md" id="md"> <label for="md">M</label></li>
+                <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
+                <li><input type="checkbox" name="size" value="xl" id="xl"> <label for="xl">XL</label></li>
               </ol>
-            </fieldset>
-
-            <footer>
-              <dl class = "rating">
-                <dt>Rating:</dt>
-                <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-              </dl>
-              <div class = "resultsButtonsContainer">
-              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add to Cart</button>
-              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
-              <a class = "resultsButtons" href="#">See More</a>
             </div>
-            </footer>
-          </form>
-        </article>
-
-        <!-- Product 2 -->
-        <article class= "result">
-          <header>
-            <img class="product" src="img/flowy_loose_dress.jpg" alt="Product Image">
-          </header>
-          <data class = "price" value="30">$30.00</data>
-          <h3>Baggy Beige Dress with Button Accents</h3>
-          <p>Feeling like you want to be fashionable and comfy? Well nothing is more freeing then this loosefitting beige dress. Held together by this ribbon belt, it shows off your curves while giving you all the breathe. Made with 100% locally sourced cotton</p>
-          <form>
-            <fieldset>
-              <legend>Colours</legend>
-              <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
-              </ul>
-            </fieldset>
-
-            <fieldset>
-              <legend>Sizes</legend>
+            <div class = "filter">
+              <legend>Ratings (above)</legend>
               <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
+                <li>
+                  <input type="radio" name="rating" value="1" id="One">
+                  <label for="One">
+                    <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="2" id="Two">
+                  <label for="Two">
+                    <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="3" id="Three">
+                  <label for="Three">
+                    <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="4" id="Four">
+                  <label for="Four">
+                    <span class="material-icons">star</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span><span class="material-icons">star_border</span>
+                  </label>
+                </li>
+                <li>
+                  <input type="radio" name="rating" value="5" id="Five">
+                  <label for="Five">
+                    <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span>
+                  </label>
+                </li>   
               </ol>
-            </fieldset>
-
-            <footer>
-              <dl class = "rating">
-                <dt>Rating:</dt>
-                <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-              </dl>
-              <div class = "resultsButtonsContainer">
-              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add to Cart</button>
-              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
-              <a class = "resultsButtons" href="#">See More</a>
             </div>
-            </footer>
           </form>
-        </article>
-
-        <!-- Product 3 -->
-        <article class= "result">
-          <header>
-            <img class="product" src="img/sandals.jpg" alt="Product Image">
-          </header>
-          <data class = "price" value="39">$39.00</data>
-          <h3>Fabric Open-toed Wedges</h3>
-          <p> Wanting that extra height, but tired of ill-fitting, blister-inducing high heels? Hop on the wedges train! You feel tall and confident, rocking a fabric shoe look with these puppies, and most of all - no pain! Hand-stiched at our warehouse, made with various plant fibers.</p>
-          <form>
-            <fieldset>
-              <legend>Colours</legend>
-              <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
-              </ul>
-            </fieldset>
-
-            <fieldset>
-              <legend>Sizes</legend>
-              <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
-
-            <footer>
-              <dl class = "rating">
-                <dt>Rating:</dt>
-                <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-              </dl>
-              <div class = "resultsButtonsContainer">
-              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add to Cart</button>
-              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
-              <a class = "resultsButtons" href="#">See More</a>
-            </div>
-            </footer>
-          </form>
-        </article>
-  
-        <!-- Product 4 -->
-        <article class= "result">
-          <header>
-            <img class="product" src="img/leapord_print_dress.jpg" alt="Product Image">
-          </header>
-          <data class = "price" value="50">$50.00</data>
-          <h3>Leaopard Print Long Sleeve Dress</h3>
-          <p>Channel that fierce energy with this long-sleeved animal print dress! Don't worry, it's still light enough to wear in the spring, and loud enough to turn all those heads with your canine energy. Made with 100% locally-sourced cotton</p>
-          <form>
-            <fieldset>
-              <legend>Colours</legend>
-              <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
-              </ul>
-            </fieldset>
-
-            <fieldset>
-              <legend>Sizes</legend>
-              <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
-
-            <footer>
-              <dl class = "rating">
-                <dt>Rating:</dt>
-                <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-              </dl>
-              <div class = "resultsButtonsContainer">
-              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add to Cart</button>
-              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
-              <a class = "resultsButtons" href="#">See More</a>
-            </div>
-            </footer>
-          </form>
-        </article>
-
-        <!-- Product 5 -->
-        <article class= "result">
-          <header>
-            <img class="product" src="img/patterned_blouse.jpg" alt="Product Image">
-          </header>
-          <data class = "price" value="39">$39.00</data>
-          <h3>Abstract Patterned Blouse</h3>
-          <p> With these soft pinks and turquoise colours, this would make a lovely addition to your spring closet. Made with 100% locally-sourced cotton.</p>
-          <form>
-            <fieldset>
-              <legend>Colours</legend>
-              <ul>
-                <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
-              </ul>
-            </fieldset>
-
-            <fieldset>
-              <legend>Sizes</legend>
-              <ol>
-                <li><label><input type="radio" name="size" value="m"> M</label></li>
-                <li><label><input type="radio" name="size" value="l"> L</label></li>
-                <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-              </ol>
-            </fieldset>
-
-            <footer>
-              <dl class = "rating">
-                <dt>Rating:</dt>
-                <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-              </dl>
-              <div class = "resultsButtonsContainer">
-              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add to Cart</button>
-              <button class = "resultsButtons" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
-              <a class = "resultsButtons" href="#">See More</a>
-            </div>
-            </footer>
-          </form>
-        </article>
+        </header>
       </section>
+    <section class = resultsSection>
+      <h2 class = resultsTitle>Results</h2>
+        <section class = "resultsContainer">
+          <!-- Product 1 -->
+          <article class = "result">
+            <header>
+              <img class="product" src="img/white_dress.jpg" alt="Product Image">
+            </header>
+            <data class = "price" value="39">$39.00</data>
+            <h3 class = "title">Spring White Dress with Blue Flowers</h3>
+            <p class = "description">A perfect dress for this spring. Cinched at the waist with a flowy bottom, accented with vibrant blue flowers. Made with 100% locally-sourced cotton.</p>
+            <form>
+              <ul class = "options">
+                <li class = "catagory1"><legend">Colours:</legend></li>
+                <li class = "a1"><label><input type="radio" name="colour" value="r"> Red</label></li>
+                <li class = "b1"><label><input type="radio" name="colour" value="w"> White</label></li>
+                <li class = "c1"><label><input type="radio" name="colour" value="b"> Blue</label></li>
+                <li class = "catagory2"><legend>Sizes:</legend></li>
+                <li class = "a2"><label><input type="radio" name="size" value="m"> M</label></li>
+                <li class = "b2"><label><input type="radio" name="size" value="l"> L</label></li>
+                <li class = "c2"><label><input type="radio" name="size" value="xl"> XL</label></li>
+              </ul>
+              <footer>
+                <dl class = "rating">
+                  <dt>Rating:</dt>
+                  <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+                </dl>
+                <div class = "resultsButtonsContainer">
+                  <button class = "resultsButtons a" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add</button>
+                  <button class = "resultsButtons b" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
+                  <button class = "resultsButtons c" type="button"><span><a class="link" href="#">See More</a></span></button>
+                </div>
+              </footer>
+            </form>
+          </article>
 
-      <section role="navigation" aria-label="Pagination">
+          <!-- Product 2 -->
+          <article class= "result">
+            <header>
+              <img class="product" src="img/flowy_loose_dress.jpg" alt="Product Image">
+            </header>
+            <data class = "price" value="30">$30.00</data>
+            <h3 class = "title">Baggy Beige Dress with Button Accents</h3>
+            <p class = "description">Feeling like you want to be fashionable and comfy? Well nothing is more freeing then this loosefitting beige dress. Held together by this ribbon belt, it shows off your curves while giving you all the breathe. Made with 100% locally sourced cotton</p>
+            <form>
+              <ul class = "options">
+                <li class = "catagory1"><legend">Colours:</legend></li>
+                <li class = "a1"><label><input type="radio" name="colour" value="r"> Red</label></li>
+                <li class = "b1"><label><input type="radio" name="colour" value="w"> White</label></li>
+                <li class = "c1"><label><input type="radio" name="colour" value="b"> Blue</label></li>
+                <li class = "catagory2"><legend>Sizes:</legend></li>
+                <li class = "a2"><label><input type="radio" name="size" value="m"> M</label></li>
+                <li class = "b2"><label><input type="radio" name="size" value="l"> L</label></li>
+                <li class = "c2"><label><input type="radio" name="size" value="xl"> XL</label></li>
+              </ul>
+              <footer>
+                <dl class = "rating">
+                  <dt>Rating:</dt>
+                  <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+                </dl>
+                <div class = "resultsButtonsContainer">
+                  <button class = "resultsButtons a" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add</button>
+                  <button class = "resultsButtons b" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
+                  <button class = "resultsButtons c" type="button"><span><a class="link" href="#">See More</a></span></button>
+                </div>
+              </footer>
+            </form>
+          </article>
+
+          <!-- Product 3 -->
+          <article class= "result">
+            <header>
+              <img class="product" src="img/sandals.jpg" alt="Product Image">
+            </header>
+            <data class = "price" value="39">$39.00</data>
+            <h3 class = "title">Fabric Open-toed Wedges</h3>
+            <p class = "description"> Wanting that extra height, but tired of ill-fitting, blister-inducing high heels? Hop on the wedges train! You feel tall and confident, rocking a fabric shoe look with these puppies, and most of all - no pain! Hand-stiched at our warehouse, made with various plant fibers.</p>
+            <form>
+  
+              <ul class = "options">
+                <li class = "catagory1"><legend">Colours:</legend></li>
+                <li class = "a1"><label><input type="radio" name="colour" value="r"> Red</label></li>
+                <li class = "b1"><label><input type="radio" name="colour" value="w"> White</label></li>
+                <li class = "c1"><label><input type="radio" name="colour" value="b"> Blue</label></li>
+                <li class = "catagory2"><legend>Sizes:</legend></li>
+                <li class = "a2"><label><input type="radio" name="size" value="m"> M</label></li>
+                <li class = "b2"><label><input type="radio" name="size" value="l"> L</label></li>
+                <li class = "c2"><label><input type="radio" name="size" value="xl"> XL</label></li>
+              </ul>
+
+              <footer>
+                <dl class = "rating">
+                  <dt>Rating:</dt>
+                  <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+                </dl>
+                <div class = "resultsButtonsContainer">
+                  <button class = "resultsButtons a" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add</button>
+                  <button class = "resultsButtons b" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
+                  <button class = "resultsButtons c" type="button"><span><a class="link" href="#">See More</a></span></button>
+                </div>
+              </footer>
+            </form>
+          </article>
+    
+          <!-- Product 4 -->
+          <article class= "result">
+            <header>
+              <img class="product" src="img/leapord_print_dress.jpg" alt="Product Image">
+            </header>
+            <data class = "price" value="50">$50.00</data>
+            <h3 class = "title">Leaopard Print Long Sleeve Dress</h3>
+            <p class="description">Channel that fierce energy with this long-sleeved animal print dress! Don't worry, it's still light enough to wear in the spring, and loud enough to turn all those heads with your canine energy. Made with 100% locally-sourced cotton</p>
+            <form>
+    
+              <ul class = "options">
+                <li class = "catagory1"><legend">Colours:</legend></li>
+                <li class = "a1"><label><input type="radio" name="colour" value="r"> Red</label></li>
+                <li class = "b1"><label><input type="radio" name="colour" value="w"> White</label></li>
+                <li class = "c1"><label><input type="radio" name="colour" value="b"> Blue</label></li>
+                <li class = "catagory2"><legend>Sizes:</legend></li>
+                <li class = "a2"><label><input type="radio" name="size" value="m"> M</label></li>
+                <li class = "b2"><label><input type="radio" name="size" value="l"> L</label></li>
+                <li class = "c2"><label><input type="radio" name="size" value="xl"> XL</label></li>
+              </ul>
+    
+              <footer>
+                <dl class = "rating">
+                  <dt>Rating:</dt>
+                  <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+                </dl>
+                <div class = "resultsButtonsContainer">
+                  <button class = "resultsButtons a" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add</button>
+                  <button class = "resultsButtons b" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
+                  <button class = "resultsButtons c" type="button"><span><a class="link" href="#">See More</a></span></button>
+                </div>
+              </footer>
+            </form>
+          </article>
+        
+          <!-- Product 5 -->
+          <article class= "result">
+            <header>
+              <img class="product" src="img/patterned_blouse.jpg" alt="Product Image">
+            </header>
+            <data class = "price" value="39">$39.00</data>
+            <h3 class = "title">Abstract Patterned Blouse</h3>
+            <p class = "description"> With these soft pinks and turquoise colours, this would make a lovely addition to your spring closet. Made with 100% locally-sourced cotton.</p>
+            <form>
+                <ul class = "options">
+                  <li class = "catagory1"><legend">Colours:</legend></li>
+                  <li class = "a1"><label><input type="radio" name="colour" value="r"> Red</label></li>
+                  <li class = "b1"><label><input type="radio" name="colour" value="w"> White</label></li>
+                  <li class = "c1"><label><input type="radio" name="colour" value="b"> Blue</label></li>
+                  <li class = "catagory2"><legend>Sizes:</legend></li>
+                  <li class = "a2"><label><input type="radio" name="size" value="m"> M</label></li>
+                  <li class = "b2"><label><input type="radio" name="size" value="l"> L</label></li>
+                  <li class = "c2"><label><input type="radio" name="size" value="xl"> XL</label></li>
+                </ul>
+              <footer>
+                <dl class = "rating">
+                  <dt>Rating:</dt>
+                  <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
+                </dl>
+                <div class = "resultsButtonsContainer">
+                  <button class = "resultsButtons a" type="button"><span class="material-icons resultsButtonIcons">add_shopping_cart</span> Add</button>
+                  <button class = "resultsButtons b" type="button"><span class="material-icons resultsButtonIcons">favorite</span></button>
+                  <button class = "resultsButtons c" type="button"><span><a class="link" href="#">See More</a></span></button>
+                </div>
+              </footer>
+            </form>
+          </article>
+        </section>
+    </section>
+
+      <section class ="resultsEnd" role="navigation" aria-label="Pagination">
         <p>1-5 of 23 products found</p>
-        <ol>
-          <li><a href="#" aria-label="Current Page, Page 1" aria-current="true">1</a></li>
-          <li><a href="#" aria-label="Page 2">2</a></li>
-          <li><a href="#" aria-label="Page 3">3</a></li>
-          <li><a href="#" aria-label="Page 4">4</a></li>
-          <li><a href="#" aria-label="Page 5">5</a></li>
+        <ol class = "pages">
+          <li class = "page"><a href="#" aria-label="Current Page, Page 1" aria-current="true">1</a></li>
+          <li class = "page"><a href="#" aria-label="Page 2">2</a></li>
+          <li class = "page"><a href="#" aria-label="Page 3">3</a></li>
+          <li class = "page"><a href="#" aria-label="Page 4">4</a></li>
+          <li class = "page"><a href="#" aria-label="Page 5">5</a></li>
         </ol>
       </section>
     </main>
